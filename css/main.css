@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Varino-Normal ;
+  src: url(../fonts/Varino/Varino\ -\ Normal.ttf);
+}
+
+body {
+    background: url(../img/fondo-futurista.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: Varino-Normal;
+}
+
+.flags{
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flags_item img{
+  width: 200px;
+}
+
+h1 {
+  color: whitesmoke;
+  position: relative;
+  /* background-color: rgba(246, 230, 230, 0.401); */
+  
+  font-size: 100px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.tittlebuttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  padding-top: 100px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+    background: #fff; /* color de fondo */
+    color: #4741d7; /* color de fuente */
+    font-size: 50px; /* tamaño de fuente */
+    margin: 100px;
+    width: 500px;
+    height: 200px;
+    border: 2px solid #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+.button-login:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  
+.button-login::after {
+    content: "";
+    background: #4741d7; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+  }
+
+.button-login:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
+  }
+
+.button-aineth:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  
+.button-aineth::after {
+    content: "";
+    background: #4741d7; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+  }
+
+.button-aineth:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
+  }
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+  font-size: 75px;
+  color: white;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input{
+  font-size: 50px;
+  width: 50%;
+  height: 200px;
+  color: #4741d7
+}
+
