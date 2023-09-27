@@ -10,12 +10,13 @@
 }
 
 body {
-    background: url(../img/fondo-futurista.jpg) no-repeat center center fixed;
-    background-size: cover;
-    font-family: Varino-Normal;
+  background: url(../img/fondo-futurista.jpg) no-repeat center center fixed;
+  width: 100%;
+  background-size: cover;
+  font-family: Varino-Normal;
 }
 
-.flags{
+/* .flags{
   width: 75px;
   display: flex;
   align-items: center;
@@ -24,14 +25,13 @@ body {
 
 .flags_item img{
   width: 200px;
-}
+} */
 
 h1 {
   color: whitesmoke;
   position: relative;
   /* background-color: rgba(246, 230, 230, 0.401); */
-  
-  font-size: 100px;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px;
   text-align: center;
@@ -43,28 +43,29 @@ h1 {
 }
 
 .buttons{
-  padding-top: 100px;
   display: flex;
-  text-align: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
 }
 
 button {
-    background: #fff; /* color de fondo */
-    color: #4741d7; /* color de fuente */
-    font-size: 50px; /* tamaño de fuente */
-    margin: 100px;
-    width: 500px;
-    height: 200px;
-    border: 2px solid #4741d7; /* tamaño y color de borde */
-    padding: 16px 20px;
-    border-radius: 3px; /* redondear bordes */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
-    cursor: pointer;
-  }
+  background: #fff; /* color de fondo */
+  color: #4741d7; /* color de fuente */
+  font-size: 10px; /* tamaño de fuente */
+  margin: auto;
+  width: auto;
+  height: auto;
+  border: 10px #4741d7; /* tamaño y color de borde */
+  padding: 16px 20px;
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
 
 .button-login:hover {
     color: #fff;/* color de fuente hover */
@@ -129,7 +130,7 @@ body {
 }
 
 label {
-  font-size: 75px;
+  font-size: 20px;
   color: white;
   display: block;
   margin-top: 10px;
@@ -137,9 +138,71 @@ label {
 }
 
 input{
-  font-size: 50px;
-  width: 50%;
-  height: 200px;
+  font-size: 15px;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
   color: #4741d7
+}
+
+.blue-text {
+  color: blue;
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  }
+
+@media (min-width: 768px) {
+  h1 {
+    color: whitesmoke;
+    position: relative;
+    /* background-color: rgba(246, 230, 230, 0.401); */
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  button {
+    background: #fff; /* color de fondo */
+    color: #4741d7; /* color de fuente */
+    font-size: 30px; /* tamaño de fuente */
+    margin: auto;
+    width: auto;
+    height: auto;
+    border: 10px #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  input{
+    font-size: 30px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    color: #4741d7
+  }
+
 }
 

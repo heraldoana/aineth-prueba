@@ -13,22 +13,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Monoton&family=Orbitron&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-ppl">
 
-    </div>
+<!-- botones de cambio de idioma -->
+<!--     <nav>
+        <div class="idiomas">
+            <button id="idiomaEs")"><img src="./img/ar.svg" alt="Bandera Argentina"></button>
+            <button id="idiomaEn"><img src="./img/gb.svg" alt="Bandera Inglesa"></button>
+        </div>
+    </nav> -->
+
     <div class="tittlebuttons">
         <div class="tittle">
-            <h1 id="aiText">The AI partner for businesses and people.</h1>
+            <h1 id="aiText">The AI <span class="blue-text">partner</span> for businesses and people.</h1>
         </div>
         <div class="buttons">
-            <button id="inicioSesionBtn" class="button-login">Click Me!</button>
-            <button id="provebot" class="button-aineth">Prove aineth.ai bot</button>
+            <button id="formBtnEn" class="button-login">Request early access</button>
+            <button id="formBtnEs" class="button-aineth">Solicita acceso</button>
         </div>
-        <div id="formularioSesion" class="hidden">
-            <label for="username">User:</label>
-            <input type="text" id="username" placeholder="Write your username">
-            <button id="accederBtn" class="button-login">Login</button>
+        <div class="formulario">
+            <div id="formularioSesion" class="hidden">
+                <label id="userLabel" for="username">User:</label>
+                <input type="text" id="username" placeholder="Write your username">
+                <button id="accederBtn" class="button-login">Login</button>
+            </div>
         </div>
+
     </div>
     <script src="./script.js"></script>
 </body>
