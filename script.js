@@ -1,105 +1,34 @@
-//cambiar idiomas con botones (banderitas)
-/* 
-let idiomaEs = document.getElementById('idiomaEs')
-let idiomaEn = document.getElementById('idiomaEn')
-idiomaEn.onclick = () => cambiarIdiomaEn ()
-function cambiarIdiomaEn() {
-    changeTextEnglish()
-}
-idiomaEs.onclick = () => cambiarIdiomaEs ()
-function cambiarIdiomaEs() {
-    changeTextSpanish()
-}
-
-let aiText = document.getElementById('aiText');
-let currentText = 0
-const textOptionsEnglish = ["partner", "friend", "college"]
-const textOptionsSpanish = ["compañeros", "amigos", "colegio"]
-function changeTextEnglish() {
-    currentText = (currentText + 1) % textOptionsEnglish.length
-    aiText.textContent = `The AI ${textOptionsEnglish[currentText]} for businesses and people.`
-    setInterval(changeTextEnglish, 3000) // Cambia cada 3 segundos (3000 milisegundos)
-}
-function changeTextSpanish() {
-    currentText = (currentText + 1) % textOptionsSpanish.length
-    aiText.textContent = `La inteligencia artificial de ${textOptionsSpanish[currentText]} para trabajos y personas.`
-    setInterval(changeTextSpanish, 3000); // Cambia cada 3 segundos (3000 milisegundos)
-} */
-
-
-/* // Cambiar el comportamiento del bot según el idioma
-const inicioSesionBtn = document.getElementById('provebot')
-inicioSesionBtn.addEventListener('click', function () {
-    if (language === 'es') {
-        // Lógica para abrir el bot de aineth.ai en español
-    } else if (language === 'en') {
-        // Lógica para abrir el bot de aineth.ai en inglés
-    }
-}) */
-
 document.addEventListener('DOMContentLoaded', function () {
-    const titulo = document.getElementById('aiText');
+    const aiText = document.getElementById('aiText');
+    let currentText = 0;
+    const textOptions = ["partner", "friend", "college"];
 
-
-    const palabras = ['partner', 'friend', 'college'];
-    let indicePalabra = 0;
-
-    // Función para cambiar la palabra y color
-    function cambiarPalabra() {
-        titulo.textContent = titulo.textContent.replace(palabras[indicePalabra], palabras[(indicePalabra + 1) % palabras.length]);
-        titulo.classList.toggle('blue-text');
-        indicePalabra = (indicePalabra + 1) % palabras.length;
+    // Función para cambiar el texto automáticamente
+    function changeText() {
+        currentText = (currentText + 1) % textOptions.length;
+        aiText.textContent = `The AI ${textOptions[currentText]} for businesses and people.`;
     }
 
-    // Cambiar la palabra cada 2 segundos
-    setInterval(cambiarPalabra, 2000);
+    // Llama a la función para cambiar el texto cada 3 segundos (puedes ajustar el tiempo)
+    setInterval(changeText, 3000); // Cambia cada 3 segundos (3000 milisegundos)
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const formBtnEn = document.getElementById('formBtnEn')
-    const formularioSesion = document.getElementById('formularioSesion')
-    const usernameInput = document.getElementById('username')
-    const accederBtn = document.getElementById('accederBtn')
-    const userLabel = document.getElementById('userLabel')
-    
-    // Lista de nombres de usuario válidos
-    const usuariosValidos = ['usuario1', 'usuario2', 'usuario3']
+const formBtnEn = document.getElementById('formBtnEn');
+const formBtnEs = document.getElementById('formBtnEs');
 
-    formBtnEn.addEventListener('click', function () {
-        // Mostrar el formulario de inicio de sesión
-        formularioSesion.classList.remove('hidden')
-    });
+// Asigna las URLs de destino
+const urlEnglish = 'https://www.google.com';
+const urlSpanish = 'https://www.yahoo.com';
 
-    formBtnEs.addEventListener('click', function() {
-        formularioSesion.classList.remove('hidden')
-        userLabel.textContent = 'Usuario'
-        const inputElement = document.getElementById('username');
-        const nuevoPlaceholder = 'Ingrese el usuario';
-        inputElement.placeholder = nuevoPlaceholder;
-        accederBtn.textContent = 'Iniciar Sesion'
-    });
-
-
-
-    accederBtn.addEventListener('click', function () {
-        const username = usernameInput.value
-
-        // Verificar si el nombre de usuario está en la lista de usuarios válidos
-        if (usuariosValidos.includes(username)) {
-            // Redirigir al usuario a la URL de destino (puedes modificar la URL)
-            window.location.href = 'URL_de_destino?usuario=' + username
-        } else {
-            alert('The user entered is incorrect. please check');
-        }
-    });
+// Agrega un evento de clic al primer botón para redireccionar a Google
+formBtnEn.addEventListener('click', function () {
+    window.location.href = urlEnglish;
 });
 
-
-
-
-
-
-
+// Agrega un evento de clic al segundo botón para redireccionar a Yahoo
+formBtnEs.addEventListener('click', function () {
+    window.location.href = urlSpanish;
+});
 
 
 

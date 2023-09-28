@@ -115,8 +115,6 @@ button {
     transform: skewX(-45deg) scale(1, 1);
   }
 
-
-
 body {
     display: flex;
     justify-content: center;
