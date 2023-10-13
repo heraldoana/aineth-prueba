@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const aiText = document.getElementById('aiText');
     let currentText = 0;
-    const textOptions = ["partner", "friend", "college"];
+    const textOptions = ["AI partner", "AI friend", "AI college"];
 
     // Función para cambiar el texto automáticamente
     function changeText() {
         currentText = (currentText + 1) % textOptions.length;
-        aiText.textContent = `The AI ${textOptions[currentText]} for businesses and people.`;
+        aiText.textContent = ` ${textOptions[currentText]} `;
     }
 
     // Llama a la función para cambiar el texto cada 3 segundos (puedes ajustar el tiempo)
